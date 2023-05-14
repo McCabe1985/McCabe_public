@@ -1,0 +1,19 @@
+@use "../../utils/" as *;
+
+.trustpilot-widget-container {
+  width: 100%;
+  background-color: white;
+  .trustpilot-widget-text {
+    text-align: center;
+    font-family: $trustpilot-font;
+    padding: 0.5em;
+    .trustpilot-link {
+      font-weight: 700;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

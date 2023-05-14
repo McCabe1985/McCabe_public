@@ -1,0 +1,98 @@
+@use "../utils/" as *;
+
+.nav-container {
+  @include flexContainer(row);
+  justify-content: flex-end;
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+  @include headingFont(white, 1.5rem);
+  .logo-container {
+    margin-right: auto;
+    margin-left: 1rem;
+    width: 15rem;
+    height: auto;
+    .logo {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+  .nav-menu-dropdown-container {
+    display: none;
+    @include lg {
+      display: block;
+      position: relative;
+    }
+    .dropdown-links-container {
+      display: none;
+      @include lg {
+        animation: slideDown 1s ease 0s 1 normal forwards;
+        display: block;
+        @include flexContainer(column);
+        align-items: flex-start;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        background-color: black;
+        width: 18ch;
+        padding: 0.5rem;
+      }
+    }
+  }
+  .nav-link {
+    display: none;
+    @include lg {
+      display: block;
+      margin: 0 1.5rem;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+        color: $accent-clr2;
+        text-decoration: underline;
+      }
+    }
+  }
+  .nav-call-to-action {
+    display: none;
+    @include lg {
+      display: block;
+    }
+  }
+  .dropdown-link {
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      color: $accent-clr2;
+      text-decoration: underline;
+    }
+  }
+  .hamburger-button {
+    margin: 0 0.5rem;
+    @include lg {
+      display: none;
+    }
+  }
+}
+
+.mobile-nav-container {
+  @include flexContainer(column);
+  width: 100%;
+  background-color: black;
+  @include headingFont(white, 2rem);
+  .mobile-nav-item {
+    list-style-type: none;
+    text-align: center;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      color: $accent-clr2;
+      text-decoration: underline;
+    }
+  }
+}
+.active {
+  color: $accent-clr2;
+}

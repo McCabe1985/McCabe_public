@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="600.353"
+   height="178.012"
+   viewBox="0 0 158.843 47.099"
+   version="1.1"
+   id="svg156"
+   sodipodi:docname="gradient-banner-reversed.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview158"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="2.2320201"
+     inkscape:cx="297.04034"
+     inkscape:cy="69.219807"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg156" />
+  <defs
+     id="defs152">
+    <linearGradient
+       id="a">
+      <stop
+         style="stop-color:#99c0ff;stop-opacity:1"
+         offset="0"
+         id="stop146" />
+      <stop
+         style="stop-color:#99c0ff;stop-opacity:0"
+         offset="1"
+         id="stop148" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#a"
+       id="b"
+       x1="40.819"
+       y1="69.263"
+       x2="54.589024"
+       y2="33.25465"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,199.662,-44.698)" />
+  </defs>
+  <path
+     style="fill:url(#b);fill-opacity:1;stroke-width:0.264583"
+     d="M 158.843,0 H 0 v 47.099 h 158.843 z"
+     id="path154" />
+</svg>

@@ -1,0 +1,120 @@
+@use "../utils/" as *;
+
+.blog-content-container {
+  @include flexContainer(column);
+  width: 100%;
+  @include primaryFont(black, 1rem, 400);
+  .blog-header-container {
+    @include flexContainer(column);
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    background-image: url("../images/headerbgshape.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .blog-banner-image-container {
+      width: 100%;
+    }
+    .blog-heading {
+      @include headingFont(white, 2rem);
+    }
+    .blog-metadata-container {
+      @include flexContainer(row);
+      width: 100%;
+      margin: 1rem 0;
+      @include lg {
+        width: 50%;
+      }
+      .author-img-container {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid black;
+        @include lg {
+          height: 6rem;
+          width: 6rem;
+        }
+      }
+      .blog-metadata-text-container {
+        margin: 0 1rem;
+      }
+      .category {
+        align-self: flex-end;
+        margin-left: auto;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .blog-intro-section {
+    @include flexContainer(column);
+    width: 100%;
+    padding: 0.5rem;
+    .blog-intro-heading {
+      @include headingFont(black, 2rem);
+      margin: 1rem 0;
+
+      @include md {
+        font-size: 4rem;
+      }
+      @include lg {
+        font-size: 2rem;
+      }
+    }
+    .blog-intro-text {
+      margin-bottom: 1rem;
+      @include lg {
+        max-width: 70%;
+      }
+    }
+  }
+  .blog-section {
+    @include flexContainer(column);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    .blog-section-text-container {
+      order: 1;
+      width: 100%;
+      @include lg {
+        max-width: 50%;
+      }
+      .blog-section-heading {
+        @include headingFont(black, 2rem);
+        margin: 1rem 0;
+
+        @include md {
+          font-size: 4rem;
+        }
+        @include lg {
+          font-size: 2rem;
+        }
+      }
+      .blog-section-text {
+        margin: 1.5rem 0;
+        @include breakpoint(400px) {
+          font-size: 1.3rem;
+        }
+        @include md {
+          font-size: 2rem;
+        }
+        @include lg {
+          font-size: 1rem;
+        }
+        em {
+          font-weight: 700;
+        }
+      }
+      .blog-section-img-container {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

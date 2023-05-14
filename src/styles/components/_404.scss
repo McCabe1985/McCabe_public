@@ -1,0 +1,12 @@
+@use "../utils/" as *;
+
+.not-found-header {
+  @include headingFont(black, 2rem);
+  margin: 3rem auto;
+}
+
+.not-found-text {
+  font-family: $primary-font;
+  font-size: 1.5rem;
+  margin: 3rem auto;
+}

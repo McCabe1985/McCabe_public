@@ -1,0 +1,69 @@
+@use "../../utils/" as *;
+
+.homepage-testimonials-section-container {
+  @include flexContainer(column);
+  width: 100%;
+  padding: 1rem;
+  @include primaryFont(white, 1rem, 400);
+  background-color: #222;
+  @include md {
+    font-size: 1.3rem;
+  }
+  .testimonials-section-heading {
+    @include headingFont(white, 2rem);
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+    @include md {
+      font-size: 4rem;
+    }
+  }
+  .testimonials-section-content-container {
+    @include flexContainer(row);
+    justify-content: space-around;
+    width: 80%;
+    padding-bottom: 3rem;
+    .testimonials-section-text-area-container {
+      .testimonials-section-testimonialcard {
+        color: black;
+        background-color: white;
+        border-radius: 8px;
+        padding: 1rem;
+        @include md {
+          max-width: 40rem;
+        }
+        .testimonials-section-testimonialcard-link {
+          font-weight: 900;
+          position: relative;
+          &:hover,
+          &:focus {
+            color: $accent-clr2;
+            text-decoration: underline;
+          }
+        }
+        hr {
+          opacity: 0.3;
+        }
+        .testimonials-section-testimonialscard-rating {
+          margin: 1rem 0;
+        }
+        .testimonialscard-heading {
+          font-weight: 700;
+        }
+        .testimonial-card-date {
+          margin: 0.5rem auto;
+          span {
+            margin-right: 0.5rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .testimonials-section-gonzo-container {
+      display: none;
+      @include md {
+        display: block;
+        width: 30rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@use "../../utils/" as *;
+
+.packages-section-container {
+  @include flexContainer(column);
+  width: 100%;
+  padding: 1rem;
+  background-color: #222;
+  .packages-section-heading {
+    @include headingFont(white, 2rem);
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+    @include md {
+      font-size: 4rem;
+    }
+  }
+}
+.packages-section-infocard-container {
+  @include primaryFont(black, 1rem, 400);
+  @include flexContainer(row);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  @include md {
+    font-size: 1.3rem;
+  }
+  @include lg {
+    font-size: 1rem;
+  }
+  .packages-section-infocard {
+    @include flexContainer(column);
+    margin: 1.5rem auto;
+    width: 16rem;
+    align-self: flex-start;
+    background-color: #dddddd;
+    @include sm {
+      height: 550px;
+    }
+    @include md {
+      min-height: 750px;
+    }
+    @include lg {
+      min-height: 35rem;
+    }
+    .packages-section-infocard-header-container {
+      border: 1px solid black;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: auto;
+      background-color: $accent-clr;
+      .packages-section-infocard-heading {
+        @include headingFont(black, 1rem);
+        text-align: center;
+        margin: 1rem 0;
+        @include md {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    .best-choice {
+      position: relative;
+      background-color: $accent-clr2;
+      &::after {
+        display: none;
+        @include md {
+          content: "Best Value";
+          display: block;
+          position: absolute;
+          z-index: 2;
+          top: 30px;
+          right: -20px;
+          background-color: $accent-clr;
+          border: 1px solid black;
+          padding: 0.5em 1em;
+          transform: rotate(60deg);
+          font-weight: 900;
+          @include lg {
+            transform: rotate(45deg);
+          }
+        }
+      }
+      @include lg {
+        .packages-section-infocard-heading {
+          font-size: 2rem;
+        }
+      }
+    }
+    .packages-section-infocard-content-container {
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+      height: 100%;
+      .packages-section-infocard-top-text {
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        font-weight: 700;
+      }
+      .packages-section-infocard-features-list {
+        padding: 1rem;
+        .packages-section-infocard-list-item {
+          list-style: none;
+          margin: 0.5rem auto;
+          span {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+  .packages-section-infocard-price-container {
+    @include flexContainer(column);
+    justify-content: center;
+    border: 1px solid black;
+    width: 100%;
+    height: 6rem;
+    background-color: $accent-clr2;
+    .packages-section-infocard-price {
+      @include headingFont(black, 1rem);
+      @include md {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .best-choice-container {
+    background-color: $accent-clr;
+  }
+}

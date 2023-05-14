@@ -1,0 +1,107 @@
+@use "../../utils/" as *;
+
+.blogs-container {
+  @include flexContainer(row);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+.blogindex-blogcard-container {
+  @include flexContainer(column);
+  justify-content: space-between;
+  width: 20rem;
+
+  background-color: #dddddd;
+  margin: 1rem;
+  border: 1px solid black;
+  @include md {
+    height: 28rem;
+  }
+  .blogindex-blogcard-img-container {
+    display: none;
+    .blogindex-blogcard-img {
+      width: 100%;
+      border-bottom: 1px solid black;
+    }
+    @include lg {
+      display: block;
+    }
+  }
+
+  .blogindex-blogcard-text-container {
+    padding: 1rem;
+    @include primaryFont(black, 0.9rem, 400);
+    @include breakpoint(400px) {
+      font-size: 1.3rem;
+    }
+    @include lg {
+      font-size: 0.9rem;
+    }
+    .blogindex-blogcard-heading {
+      @include headingFont(black, 1rem);
+      @include breakpoint(400px) {
+        font-size: 1.5rem;
+      }
+      @include lg {
+        font-size: 1.3rem;
+      }
+    }
+    .blogindex-blogcard-date {
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .blogindex-blogcard-link {
+    @include headingFont(black, 1rem);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid black;
+    background-color: $accent-clr2;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+    @include breakpoint(400px) {
+      font-size: 1.3rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $accent-clr;
+      transform: translateX(-410px);
+      transition: all ease-in-out 1s;
+      z-index: -1;
+    }
+    &:hover,
+    &:focus {
+      &::before {
+        width: 100%;
+        height: 100%;
+        animation: btnSlideRight linear 0.5s 0s forwards;
+      }
+    }
+  }
+}
+.blog-section-bg1 {
+  background-image: url("../images/bgshape3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog-section-bg2 {
+  background-image: url("../images/bgshape4.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog-section-bg3 {
+  background-image: url("../images/bgshape4.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

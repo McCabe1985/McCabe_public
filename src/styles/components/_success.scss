@@ -1,0 +1,12 @@
+@use "../utils/" as *;
+
+.success-heading-container {
+  @include headingFont(black, 2rem);
+  margin: 3rem auto;
+}
+
+.success-text-container {
+  font-family: $primary-font;
+  font-size: 1.5rem;
+  margin: 3rem auto;
+}

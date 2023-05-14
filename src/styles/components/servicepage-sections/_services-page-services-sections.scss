@@ -1,0 +1,151 @@
+@use "../../utils/" as *;
+.interior-header-container {
+  @include flexContainer(column);
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+  background-image: url("../images/headerbgshape.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .interior-header-heading {
+    @include headingFont(white, 2rem);
+    text-align: center;
+  }
+  .interior-header-link-container {
+    @include flexContainer(row);
+  }
+  .interior-header-blurb {
+    @include primaryFont(white, 1.2rem, 400);
+    text-align: center;
+    @include breakpoint(500px) {
+      width: 70%;
+    }
+    @include breakpoint(750px) {
+      width: 50%;
+    }
+  }
+}
+.interior-content-container {
+  @include flexContainer(column);
+  width: 100%;
+
+  @include breakpoint(800px) {
+  }
+  .interior-section-container {
+    @include flexContainer(row);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include primaryFont(black, 1rem, 400);
+    .interior-text-container {
+      order: 1;
+      width: 100%;
+      @include lg {
+        order: 0;
+        max-width: 50%;
+      }
+      .interior-section-heading {
+        @include headingFont(black, 2rem);
+        margin: 1rem 0;
+
+        @include md {
+          font-size: 4rem;
+        }
+        @include lg {
+          font-size: 2rem;
+        }
+      }
+    }
+    .interior-section-subheading {
+      @include headingFont(black, 1.3rem);
+    }
+    .interior-section-list-item {
+      margin: 0.4rem 0;
+    }
+    .interior-img-container {
+      margin-top: 1rem;
+      width: 15rem;
+
+      @include breakpoint(400px) {
+        width: 20rem;
+      }
+      @include lg {
+        width: 30%;
+        padding: 1.5rem;
+      }
+    }
+    .interior-section-text {
+      margin: 0.5rem 0;
+      margin: 1.5rem 0;
+      @include breakpoint(400px) {
+        font-size: 1.3rem;
+      }
+      @include md {
+        font-size: 2rem;
+      }
+      @include lg {
+        font-size: 1rem;
+      }
+      em {
+        font-weight: 700;
+      }
+    }
+    .interior-text-link-container {
+      @include flexContainer(row);
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+  .img-right {
+    background-image: url("../images/bgshape3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .img-left {
+    background-image: url("../images/bgshape4.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-img-right {
+    background-image: url("../images/bgshape1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-section-black {
+    background-color: #111;
+    color: white;
+  }
+  .about-img-left {
+    background-image: url("../images/bgshape2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.section-two-heading {
+  @include headingFont(white, 2rem);
+  margin: 1rem 0;
+
+  @include md {
+    font-size: 4rem;
+  }
+  @include lg {
+    font-size: 2rem;
+  }
+}
+.interior-external-link {
+  text-decoration: underline;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    color: $accent-clr2;
+  }
+}

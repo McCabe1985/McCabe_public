@@ -1,0 +1,83 @@
+@use "../utils/" as *;
+
+.contact-form {
+  @include flexContainer(column);
+  align-items: center;
+  border-radius: 10px;
+  max-width: 25rem;
+  margin: 1rem;
+  background-image: url("../images/formbackground.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include lg {
+    min-width: 70%;
+  }
+  .form-fields {
+    @include flexContainer(column);
+    width: 90%;
+    font-size: 0.9rem;
+    margin: 1rem 0rem;
+    .form-heading {
+      font-family: $heading-font;
+      text-transform: uppercase;
+      color: black;
+      font-size: 2rem;
+      margin: auto;
+      .emphasis {
+        color: $accent-clr;
+      }
+    }
+
+    .form-label {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    .form-input {
+      width: 90%;
+      padding: 0.5rem;
+      border: none;
+      border-bottom: 1.5px solid $accent-clr;
+      margin-top: 1rem;
+      @include lg {
+        margin-top: 3rem;
+      }
+    }
+    .error {
+      color: red;
+      margin-top: 1rem;
+    }
+    .form-message {
+      border: 1.5px solid $accent-clr;
+      border-radius: 5px;
+      width: 90%;
+      margin-top: 2rem;
+      padding: 0.5rem;
+      @include lg {
+        margin-top: 4rem;
+      }
+    }
+  }
+  .form-button-container {
+    @include flexContainer(row);
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 4rem;
+    .submit-button {
+      @include primaryButton(black, 1rem, 900, $accent-clr2);
+      margin-right: 3rem;
+    }
+  }
+}
+
+.hero-form-wobble {
+  animation: wobble 0.8s ease 1s 1 normal forwards;
+}
